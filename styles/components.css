@@ -1,0 +1,247 @@
+.card {
+    animation: fadeIn 0.6s ease-out;
+    margin-bottom: 0.75rem !important;
+    min-height: auto;
+    background-color: var(--container-bg-light);
+}
+
+.card-body {
+    padding: 0.75rem !important;
+
+}
+
+.product-card {
+    transition: var(--transition);
+    cursor: pointer;
+    border: 1px solid var(--footer-light);
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+.product-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-color: var(--footer-light);
+}
+
+.product-card:focus {
+    outline: none;
+    border-color: #0066cc;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.3);
+    transform: translateY(-3px);
+    z-index: 1;
+    position: relative;
+}
+
+.section-header-card {
+    border-left: 4px solid var(--footer-dark);
+}
+
+.section-header-card .card-body {
+    padding: 0.4rem 0.8rem !important;
+}
+
+.project-card .card {
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    background: var(--container-bg-light);
+    min-width: 0;
+    overflow: hidden;
+}
+
+.project-card .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.project-card .card-body {
+    padding: 1rem;
+    padding: 0.75rem !important;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 0.5rem;
+}
+
+/* заголовок с большими отступами */
+.project-card .card-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--dark-color);
+    margin: 0;
+    line-height: 1.3;
+    padding-bottom: 0.1rem;
+}
+
+/* текст с хорошими отступами */
+.project-card .card-text {
+    color: var(--secondary-color);
+    line-height: 1.5;
+    margin: 0;
+    flex-grow: 1;
+    font-size: 0.9rem;
+}
+
+.project-card .badge {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.6rem;
+    margin-right: 0.4rem;
+    margin-bottom: 0.4rem;
+    border-radius: 6px;
+}
+
+/* фикс для переполнения текста */
+.project-card .card-title,
+.project-card .card-text {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+/* стили для проектов */
+#projectsGrid .project-card .card .card-body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 0.5rem;
+}
+
+#projectsGrid .project-card .card .card-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--dark-color);
+    margin: 0;
+    line-height: 1.3;
+    padding-bottom: 0.1rem;
+}
+
+#projectsGrid .project-card .card .card-text {
+    color: var(--secondary-color);
+    line-height: 1.5;
+    margin: 0;
+    flex-grow: 1;
+    font-size: 0.9rem;
+}
+
+.project-card .card:focus {
+    border-color: var(--footer-dark);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+/* ---------------------- */
+
+/* sticky-навигация с safe areas */
+.navbar {
+    position: sticky;
+    top: 0;
+    padding-top: calc(.75rem + env(safe-area-inset-top, 0px));
+    padding-bottom: .75rem;
+    padding-left: calc(1rem + env(safe-area-inset-left, 0px));
+    padding-right: calc(1rem + env(safe-area-inset-right, 0px));
+    z-index: 1030;
+    background: var(--footer-dark) !important;
+    isolation: isolate;
+}
+
+/* мобильное меню отступ сверху */
+.navbar-collapse {
+    margin-top: 0.5rem;
+}
+
+/* навигация */
+.navbar-nav .nav-link {
+    transition: var(--transition);
+    border-radius: 4px;
+    margin: 0 2px;
+    padding: 0.5rem 1rem;
+    
+}
+
+.navbar-nav .nav-link:hover {
+    border-radius: 24px; 
+}
+
+.navbar-nav .nav-link.active {
+    background-color: transparent !important; /* Прозрачный фон */
+    border: 2px solid var(--secondary-color); /* Обводка */
+    margin: 0.1rem 0.25rem;
+    padding-left: 0.9rem !important;
+    padding-right: 0.9rem !important;
+    border-radius: 24px; 
+}
+
+/* индикатор фокуса для навигации */
+.nav-link:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.9);
+    color: inherit;
+    box-shadow: 0 0 0 2px #FFFFFF;
+    border-radius: 12px;
+}
+
+/* ---------------------- */
+
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--footer-light);
+}
+
+
+.btn-primary:focus .btn-outline-primary:focus 
+.btn-secondary:focus .btn-outline-secondary:focus {
+    background-color: var(--secondary-color);
+    color: white;
+    border-color: var(--secondary-color);
+}
+
+.btn-outline-secondary {
+    border-color:#ffffff;
+    color: #ffffff;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #ffffff;
+    color: #ffffff;
+}
+
+/* кнопка темы */
+#themeToggle {
+    transition: var(--transition);
+}
+
+#themeToggle:focus {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+
+.section {
+    margin-bottom: 1rem !important;
+}
+
+.badge.bg-info {
+    background-color: #0dcaf0;
+    color: #000000; 
+}
+
+.badge.bg-warning {
+    background-color: #ffc107;
+    color: #000000;
+}
+
+.text-primary {
+    color: #0056b3; 
+}
+
+.card.shadow-sm {
+    color: #212529;
+    background-color: var(--container-bg-light);
+}
+
+.card-text.text-muted {
+    color: #6c757d;
+}

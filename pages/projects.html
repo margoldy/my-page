@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="Мои проекты: личный сайт-портфолио, приложение для изучения языков на C++.">
+    <title>Проекты - Моя страница</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/utilities.css">
+    <link rel="stylesheet" href="../styles/components.css">
+    <link rel="stylesheet" href="../styles/timeline.css">
+    <link rel="stylesheet" href="../styles/modal.css">
+    <link rel="stylesheet" href="../styles/media.css">
+    <link rel="stylesheet" href="../styles/dark-theme.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <style>
+        html, body {
+            height: 100%;
+        }
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        .container-fluid {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        main {
+            flex: 1;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <a class="skip-link" href="#main">Перейти к основному содержанию</a>
+    <div class="page">
+        <div class="container-fluid p-0">
+            <!-- хэдер -->
+            <header class="header">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <h1 class="h3 mb-1">Моя личная страница</h1>
+                            <p class="mb-0 opacity-75">Проекты</p>
+                        </div>
+                        <div class="col-auto">
+                            <button class="btn btn-outline-secondary btn-sm" id="themeToggle" 
+                                    aria-label="Переключить цветовую тему" tabindex="0">
+                                <i class="bi bi-moon" aria-hidden="true"></i>
+                                <span class="sr-only">Переключить тему</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- навигация -->
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" 
+                        data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                        aria-label="Переключить меню навигации" 
+                        aria-expanded="false" aria-controls="navbarNav"
+                        onclick="toggleNavIcon(this)">
+                        <span id="navIcon">
+                            <i class="bi bi-chevron-double-right nav-icon"></i>
+                        </span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/index.html">
+                                    <i class="bi bi-house-heart me-2"></i>Главная
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="projects.html">
+                                    <i class="bi bi-easel2 me-2"></i>Проекты
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="diary.html">
+                                    <i class="bi bi-clipboard-check me-2"></i>Дневник
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contacts.html">
+                                    <i class="bi bi-chat-left-dots me-2"></i>Контакты
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <main id="main" class="container my-4">
+                <section class="mb-4">
+                    <div class="card shadow-sm section-header-card">
+                        <div class="card-header bg-light">
+                            <h2 class="card-title h5 mb-0">
+                                <i class="bi bi-folder me-2" aria-hidden="true"></i>
+                                Мои проекты
+                            </h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text text-muted mb-0">
+                                Полная коллекция моих учебных и личных работ
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-5">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="card h-100 product-card"
+                                    tabindex="0"
+                                    role="button"
+                                    aria-label="Посмотреть проект 'Личный сайт'"
+                                    onclick="window.location.href='#'"
+                                    onkeydown="if(event.key === 'Enter' || event.key === ' ') { 
+                                        event.preventDefault(); 
+                                        this.click(); 
+                                    }">
+                                        <div class="card-body text-center">
+                                            <h3 class="card-title h6">Личный сайт (5+)</h3>
+                                            <p class="card-text small text-muted">
+                                                Сайт-портфолио на HTML, CSS и Bootstrap с адаптивным дизайном.
+                                            </p>
+                                            <div class="mb-2">
+                                                <span class="badge bg-danger">HTML/CSS</span>
+                                                <span class="badge bg-primary">Bootstrap</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card h-100 product-card"
+                                    tabindex="0"
+                                    role="button"
+                                    aria-label="Посмотреть проект 'Голосовалка на REACT'"
+                                    onclick="window.location.href='#'"
+                                    onkeydown="if(event.key === 'Enter' || event.key === ' ') { 
+                                        event.preventDefault(); 
+                                        this.click(); 
+                                    }">
+                                        <div class="card-body text-center">
+                                            <h3 class="card-title h6">Голосовалка на REACT</h3>
+                                            <p class="card-text small text-muted">
+                                                Сайт, на котором вы можете проголосовать. Вау!
+                                            </p>
+                                            <div class="mb-2">
+                                                <span class="badge bg-success">JavaScript</span>
+                                                <span class="badge bg-danger">HTML/CSS</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card h-100 product-card"
+                                    tabindex="0"
+                                    role="button"
+                                    aria-label="Посмотреть проект 'Программа для рецептов'"
+                                    onclick="window.location.href='#'"
+                                    onkeydown="if(event.key === 'Enter' || event.key === ' ') { 
+                                        event.preventDefault(); 
+                                        this.click(); 
+                                    }">
+                                        <div class="card-body text-center">
+                                            <h3 class="card-title h6">Программа для рецептов (архив)</h3>
+                                            <p class="card-text small text-muted">
+                                                Мини-приложение для создания, сохранения, редактирования и поиска рецептов по ингредиентам.
+                                            </p>
+                                            <div class="mb-2">
+                                                <span class="badge bg-info">С++</span>
+                                                <span class="badge bg-primary">QtCreator</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- адаптивная галерея проектов -->
+                <section class="mb-5">
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-light">
+                            <h3 class="card-title h5 mb-0">
+                                <i class="bi bi-film me-2"></i>
+                                Скриншоты моих работ
+                            </h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="adaptive-gallery">
+                                <div class="gallery-item">
+                                    <img 
+                                        src="../images/project1-medium.webp" 
+                                        srcset="../images/project1-small.webp 480w,
+                                            ../images/project1-medium.webp 768w,
+                                            ../images/project1-large.webp 1200w"
+                                        sizes="(max-width: 480px) 100vw,
+                                            (max-width: 768px) 50vw,
+                                            (max-width: 1200px) 33vw,
+                                            25vw"
+                                        alt="Личный сайт - главная страница" 
+                                        class="gallery-image" 
+                                        loading="lazy">
+                                </div>
+                                <div class="gallery-item">
+                                    <img 
+                                        src="../images/project2-medium.webp" 
+                                        srcset="../images/project2-small.webp 480w,
+                                            ../images/project2-medium.webp 768w,
+                                            ../images/project2-large.webp 1200w"
+                                        sizes="(max-width: 480px) 100vw,
+                                            (max-width: 768px) 50vw,
+                                            (max-width: 1200px) 33vw,
+                                            25vw"
+                                        alt="МнеМенюБы - интерфейс" 
+                                        class="gallery-image" 
+                                        loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <!-- футер -->
+            <footer class="footer text-white py-4 mt-5">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <p class="mb-0">&copy; 2025 Мой сайт. Все права не защищены.</p>
+                        </div>
+                        <div class="col-md-6 text-md-end">
+                            <div class="d-flex flex-column align-items-md-end">
+                                <a href="pages/contacts.html" class="text-white text-decoration-none">Контакты</a>
+                                <a href="#top" id="scrollTop" 
+                                class="text-white text-decoration-none">Наверх ↑</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+            <!-- модальное окно проекта -->
+            <div id="projectModal" class="modal-dialog" role="dialog" aria-labelledby="modalTitle" aria-modal="true" aria-hidden="true" tabindex="-1">
+                <div class="modal-content-custom">
+                    <div class="modal-header-custom">
+                        <h2 id="modalTitle">Проект</h2>
+                    </div>
+                    <div class="modal-body-custom">
+                        <div id="modalContent">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../scripts/theme.js"></script>
+    <script>
+        let previousActiveElement;
+
+        // фильтр проектов
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const filter = this.getAttribute('data-filter');
+                
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                    btn.setAttribute('aria-pressed', 'false');
+                });
+                this.classList.add('active');
+                this.setAttribute('aria-pressed', 'true');
+                
+                document.querySelectorAll('#projectsGrid > div').forEach(project => {
+                    const categories = project.getAttribute('data-category').split(',');
+                    if (filter === 'all' || categories.includes(filter)) {
+                        project.style.display = 'block';
+                    } else {
+                        project.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        const projects = {
+            project1: {
+                title: 'Личный сайт',
+                description: 'Полнофункциональный сайт-портфолио с адаптивным дизайном, созданный с использованием современных веб-технологий.',
+                technologies: ['HTML', 'CSS', 'JavaScript'],
+                features: ['Адаптивный дизайн', 'Темная тема', 'Оптимизация для мобильных устройств'],
+                links: {
+                    demo: '../index.html',
+                    github: 'https://mitjink.github.io/portfolio/'
+                }
+            },
+
+            project2: {
+                title: 'Приложение для изучения иностранных языков',
+                description: 'Приложение для изучения иностранных языков.',
+                technologies: ['Qt Creator', 'C++'],
+                features: ['Выбор языка', 'Фидбек пользователю'],
+                links: {
+                    github: ''
+                }
+            }
+        };
+
+        function openProjectModal(projectId) {
+            const project = projects[projectId];
+            const modal = document.getElementById('projectModal');
+            const title = document.getElementById('modalTitle');
+            const content = document.getElementById('modalContent');
+
+            previousActiveElement = document.activeElement;
+            
+            title.textContent = project.title;
+            content.innerHTML = `
+                <div class="mb-3">
+                    <p class="text-muted">${project.description}</p>
+                </div>
+                
+                <div class="mb-3">
+                    <h3 class="h6 fw-bold">Технологии:</h3>
+                    <div class="d-flex gap-2 flex-wrap">
+                        ${project.technologies.map(tech => `<span class="badge bg-primary">${tech}</span>`).join('')}
+                    </div>
+                </div>
+                
+                <div class="mb-3">
+                    <h3 class="h6 fw-bold">Основные функции:</h3>
+                    <ul>
+                        ${project.features.map(feature => `<li>${feature}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="mb-3">
+                    <h3 class="h6 fw-bold">Ссылки:</h3>
+                    <div class="d-flex gap-2 flex-wrap">
+                        ${project.links.demo ? 
+                            `<a href="${project.links.demo}" class="btn btn-outline-primary btn-sm" target="_blank" aria-label="Посмотреть демо проекта ${project.title}">
+                                <i class="bi bi-eye me-1" aria-hidden="true"></i>Демо
+                            </a>` : ''
+                        }
+                        ${project.links.github ? 
+                            `<a href="${project.links.github}" class="btn btn-outline-dark btn-sm" target="_blank" aria-label="Посмотреть код проекта на GitHub">
+                                <i class="bi bi-github me-1" aria-hidden="true"></i>GitHub
+                            </a>` : ''
+                        }
+                    </div>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeProjectModal()" aria-label="Закрыть модальное окно проекта">Закрыть</button>
+                </div>
+            `;
+            
+            modal.setAttribute('aria-hidden', 'false');
+            modal.style.display = 'block';
+            modal.focus();
+
+            const overlay = document.createElement('div');
+            overlay.className = 'modal-overlay';
+            overlay.setAttribute('aria-hidden', 'true');
+            overlay.onclick = closeProjectModal;
+            document.body.appendChild(overlay);
+
+            document.addEventListener('keydown', handleModalEscape);
+
+            setTimeout(() => {
+                const closeBtn = modal.querySelector('.btn-secondary');
+                if (closeBtn) closeBtn.focus();
+            }, 100);
+        }
+
+        function closeProjectModal() {
+            const modal = document.getElementById('projectModal');
+            modal.setAttribute('aria-hidden', 'true');
+            modal.style.display = 'none';
+            
+            const overlay = document.querySelector('.modal-overlay');
+            if (overlay) overlay.remove();
+            
+            if (previousActiveElement) {
+                previousActiveElement.focus();
+            }
+
+            document.removeEventListener('keydown', handleModalEscape);
+        }
+
+        function handleModalEscape(event) {
+            if (event.key === 'Escape') {
+                closeProjectModal();
+            }
+        }
+
+        document.getElementById('projectModal').addEventListener('click', function(event) {
+            if (event.target === this) {
+                closeProjectModal();
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.project-card').forEach(card => {
+                card.addEventListener('keydown', function(event) {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        const projectId = this.getAttribute('data-category').split(',')[0] === 'html,css,bootstrap' ? 'project1' : 'project2';
+                        openProjectModal(projectId);
+                    }
+                });
+            });
+
+            document.getElementById('projectModal').addEventListener('keydown', function(event) {
+                if (event.key === 'Tab') {
+                    const focusableElements = this.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+                    const firstElement = focusableElements[0];
+                    const lastElement = focusableElements[focusableElements.length - 1];
+
+                    if (event.shiftKey && document.activeElement === firstElement) {
+                        event.preventDefault();
+                        lastElement.focus();
+                    } else if (!event.shiftKey && document.activeElement === lastElement) {
+                        event.preventDefault();
+                        firstElement.focus();
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+/*
+* {
+    box-sizing: border-box;
+}
+*/
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    transition: var(--transition);
+    background-image: url('../images/back_light.webp');
+    background-repeat: repeat;
+    background-size: 300px;
+}
+
+.page {
+    min-height: 100vh;
+    min-height: 100svh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* контент не заезжает под навигацию */
+main {
+    position: relative;
+    z-index: 1;
+}
+
+
+footer {
+    margin-top: auto;
+}
+
+.footer {
+    padding-bottom: calc(1rem + env(safe-area-inset-bottom));
+    background-color: var(--footer-light);
+}

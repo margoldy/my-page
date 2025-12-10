@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="Страница некоей Маргариты.">
+    <title>Главная - Моя страница</title>
+    <!-- фреймворк бутстрапа: -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- иконки бутстрапа: -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/utilities.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/timeline.css">
+    <link rel="stylesheet" href="styles/modal.css">
+    <link rel="stylesheet" href="styles/media.css">
+    <link rel="stylesheet" href="styles/dark-theme.css">
+    <!-- оптимизация загрузки: -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body class="bg-light">
+    <!-- ключевой элемент доступности бутстрапа: -->
+    <a class="skip-link" href="#main">Перейти к основному содержанию</a> 
+    <div class="page">
+        <div class="container-fluid p-0">
+
+            <!-- хэдер -->
+            <header class="header">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <h1 class="h3 mb-1">Моя личная страница</h1>
+                            <p class="mb-0 opacity-75">Главная</p>
+                        </div>
+                        <div class="col-auto">
+                            <button class="btn btn-outline-secondary btn-sm" id="themeToggle" 
+                                    aria-label="Переключить цветовую тему" tabindex="0">
+                                <i class="bi bi-moon" aria-hidden="true"></i>
+                                <span class="sr-only">Переключить тему</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- навигация -->
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" 
+                        data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                        aria-label="Переключить меню навигации" 
+                        aria-expanded="false" aria-controls="navbarNav"
+                        onclick="toggleNavIcon(this)">
+                        <span id="navIcon">
+                            <i class="bi bi-chevron-double-right nav-icon"></i>
+                        </span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="index.html" aria-current="page">
+                                    <i class="bi bi-house-heart me-2"></i>Главная
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/projects.html">
+                                    <i class="bi bi-easel2 me-2"></i>Проекты
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/diary.html">
+                                    <i class="bi bi-clipboard-check me-2"></i>Дневник
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/contacts.html">
+                                    <i class="bi bi-chat-left-dots me-2"></i>Контакты
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <main id="main" class="container my-4">
+                <!-- профиль -->
+                <section class="mb-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-3">
+                            <!--сетка с 3 колонками-->
+                            <div class="row align-items-center">
+                                <div class="col-md-3 text-center mb-3 mb-md-0 d-flex justify-content-center">
+                                    <figure class="hero-image">
+                                        <picture>
+                                            <source type="image/webp" srcset="images/my_photo.webp, images/my_photo@2x.webp 2x">
+                                            <source type="image/jpeg" srcset="images/my_photo.jpg, images/my_photo@2x.jpg 2x">
+                                            <img class="hero-photo responsive-image" src="images/my_photo.jpg" 
+                                            alt="Профессиональное фото этой студентки во время сессии"
+                                            loading="eager"
+                                            fetchpriority="high">
+                                        </picture>
+                                    </figure>
+                                </div>
+                                <div class="col-md-5">
+                                    <h2 class="card-title h4 text-dark">Гончарова Маргарита Константин-на</h2>
+                                    <p class="card-text text-muted mb-2">
+                                        <i class="bi bi-emoji-sunglasses-fill"></i>
+                                         ЭФБО-03-24
+                                    </p>
+                                    <p class="card-text">
+                                        Фуллстек разработка, вроде как. Мы обязательно выживем.
+                                    </p>
+                                </div>
+                                <div class="col-md-4 mt-4">
+                                    <div class="d-flex gap-2 flex-wrap mb-3">
+                                        <span class="badge bg-danger">HTML/CSS</span>
+                                        <span class="badge bg-success">JavaScript</span>
+                                        <span class="badge bg-warning">Python</span>
+                                        <span class="badge bg-info">C#/C++</span>
+                                    </div>
+                                    <div class="profile-actions">
+                                        <a href="assets/resume.pdf" class="btn btn-outline-dark" download>
+                                            <i class="bi bi-download me-2"></i>Скачать моё резюме (не троян, честно)</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- обо мне -->
+                <section class="mb-5">
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-light">
+                            <h2 class="card-title h5 mb-0">
+                                <i class="bi bi-person-circle"></i>
+                                О себе (краду из тг)
+                            </h2>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                Дарвин, а точно ли жизнь - это фича, а не затянувшийся баг в матрице??
+                            </p>
+                            <p class="card-text">
+                                Моя песня месяца: Stray kids - In my head
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- навыки -->
+                <section class="mb-5">
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-light">
+                            <h2 class="card-title h5 mb-0">
+                                <i class="bi bi-gear-wide-connected"></i>
+                                Мои навыки
+                            </h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <div class="d-flex justify-content-between mb-1">
+                                            <span>HTML/CSS</span>
+                                            <span class="text-primary">38%</span>
+                                        </div>
+                                        <div class="progress" style="height: 8px;">
+                                            <div class="progress-bar bg-danger" style="width: 38%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="d-flex justify-content-between mb-1">
+                                            <span>JavaScript</span>
+                                            <span class="text-primary">27%</span>
+                                        </div>
+                                        <div class="progress" style="height: 8px;">
+                                            <div class="progress-bar bg-success" style="width: 27%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="d-flex justify-content-between mb-1">
+                                            <span>Python</span>
+                                            <span class="text-primary">52%</span>
+                                        </div>
+                                        <div class="progress" style="height: 8px;">
+                                            <div class="progress-bar bg-warning" style="width: 52%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <div class="d-flex justify-content-between mb-1">
+                                            <span>C++</span>
+                                            <span class="text-primary">19%</span>
+                                        </div>
+                                        <div class="progress" style="height: 8px;">
+                                            <div class="progress-bar bg-info" style="width: 19%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="d-flex justify-content-between mb-1">
+                                            <span>C#</span>
+                                            <span class="text-primary">35%</span>
+                                        </div>
+                                        <div class="progress" style="height: 8px;">
+                                            <div class="progress-bar bg-primary" style="width: 35%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- проекты -->
+                <section class="mb-5">
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-light">
+                            <h2 class="card-title h5 mb-0">
+                                <i class="bi bi-hand-thumbs-up footer-light"></i>
+                                Лучшие работы (пока что)
+                            </h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="card h-100 product-card"
+                                    tabindex="0"
+                                    role="button"
+                                    aria-label="Посмотреть проект 'Личный сайт'"
+                                    onclick="window.location.href='#'"
+                                    onkeydown="if(event.key === 'Enter' || event.key === ' ') { 
+                                        event.preventDefault(); 
+                                        this.click(); 
+                                    }">
+                                        <div class="card-body text-center">
+                                            <h3 class="card-title h6">Личный сайт (5+)</h3>
+                                            <p class="card-text small text-muted">
+                                                Сайт-портфолио на HTML, CSS и Bootstrap с адаптивным дизайном.
+                                            </p>
+                                            <div class="mb-2">
+                                                <span class="badge bg-danger">HTML/CSS</span>
+                                                <span class="badge bg-primary">Bootstrap</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card h-100 product-card"
+                                    tabindex="0"
+                                    role="button"
+                                    aria-label="Посмотреть проект 'Голосовалка на REACT'"
+                                    onclick="window.location.href='#'"
+                                    onkeydown="if(event.key === 'Enter' || event.key === ' ') { 
+                                        event.preventDefault(); 
+                                        this.click(); 
+                                    }">
+                                        <div class="card-body text-center">
+                                            <h3 class="card-title h6">Голосовалка на REACT</h3>
+                                            <p class="card-text small text-muted">
+                                                Сайт, на котором вы можете проголосовать. Вау!
+                                            </p>
+                                            <div class="mb-2">
+                                                <span class="badge bg-success">JavaScript</span>
+                                                <span class="badge bg-danger">HTML/CSS</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card h-100 product-card"
+                                    tabindex="0"
+                                    role="button"
+                                    aria-label="Посмотреть проект 'Программа для рецептов'"
+                                    onclick="window.location.href='#'"
+                                    onkeydown="if(event.key === 'Enter' || event.key === ' ') { 
+                                        event.preventDefault(); 
+                                        this.click(); 
+                                    }">
+                                        <div class="card-body text-center">
+                                            <h3 class="card-title h6">Программа для рецептов (архив)</h3>
+                                            <p class="card-text small text-muted">
+                                                Мини-приложение для создания, сохранения, редактирования и поиска рецептов по ингредиентам.
+                                            </p>
+                                            <div class="mb-2">
+                                                <span class="badge bg-info">С++</span>
+                                                <span class="badge bg-primary">QtCreator</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <!-- футер -->
+            <footer class="footer text-white py-4 mt-5">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <p class="mb-0">&copy; 2025 Мой сайт. Все права не защищены.</p>
+                        </div>
+                        <div class="col-md-6 text-md-end">
+                            <div class="d-flex flex-column align-items-md-end">
+                                <a href="pages/contacts.html" class="text-white text-decoration-none">Контакты</a>
+                                <a href="#top" id="scrollTop" 
+                                class="text-white text-decoration-none">Наверх ↑</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="scripts/theme.js"></script>
+</body>
+</html>
